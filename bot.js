@@ -10,4 +10,4 @@ channel.send(`اكتب هنا ااش تريد يكتب فب السبام`);
 }, 30)
 })
 
-client.login(process.env.BOT_TOKEN);
+client.login("NjEwNjA0MjkzNjM2MjI3MTAy.XVK0Ww.701SCs8My2dhfK0T4KqPVENGW5w");
