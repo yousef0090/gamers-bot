@@ -22,13 +22,66 @@ client.on('message', function(msg) {
     }
   });
   
-const Discord2 = require("discord.js");
-const hamdi = new Discord2.Client();
  
 hamdi.on('ready', function(){
    console.log(`Logged in as ${hamdi.user.tag}!`);    
    hamdi.user.setGame("ۛ?server  ",`http://www.twitch.tv/v5bz`);
 });
+
+client.on("message", message => {
+
+            if (message.content.startsWith(prefix + "obc")) {
+                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+  let args = message.content.split(" ").slice(1);
+  var argresult = args.join(' '); 
+  message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
+ m.send(${argresult}\n ${m});
+})
+ message.channel.send(\${message.guild.members.filter(m => m.presence.status !== 'online').size}` : تم ارسال الرسالة الى`); 
+ message.delete(); 
+};     
+}); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 hamdi.login(process.env.BOT_TOKEN);
